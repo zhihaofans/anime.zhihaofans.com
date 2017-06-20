@@ -1,5 +1,7 @@
 $(function () {
-
+	$.getScript("/js/force-https.js", function (data, textStatus, jqxhr) {
+		console.log('/js/force-https.js 载入成功');
+	});
 	$('.post__main img').on('click', function () {
 		var $img = $(this);
 
@@ -64,7 +66,7 @@ $(function () {
 			case 191: // shift + / = ? show help modal
 				break;
 
-				// 16 shift
+			// 16 shift
 			case 84: // t
 				window.scrollToTop(1);
 				break;
@@ -125,8 +127,8 @@ $(function () {
 	});
 
 	$('body').addClass('queue-in');
-	setTimeout(function() {
-		$('body').css({ opacity: 1}).removeClass('queue-in');
+	setTimeout(function () {
+		$('body').css({ opacity: 1 }).removeClass('queue-in');
 	}, 500);
 
 });
